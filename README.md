@@ -24,7 +24,7 @@ docker run node-kubernetes-github-authn:{VERSION TAG}/latest
 
 ## Pull image down from the public Docker registry
 
-Pull the image down using: shoganator/kubernetes-github-authn-node
+Pull the image down using: shoganator/node-kubernetes-github-authn
 
 ## AWS ECR push Docker images
 
