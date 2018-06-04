@@ -2,23 +2,23 @@ apiVersion: extensions/v1beta1
 kind: DaemonSet
 metadata:
   labels:
-    k8s-app: github-authn-node
-  name: github-authn-node
+    k8s-app: node-kubernetes-github-authn
+  name: node-kubernetes-github-authn
   namespace: kube-system
 spec:
   selector:
     matchLabels:
-      k8s-app: github-authn-node
+      k8s-app: node-kubernetes-github-authn
   template:
     metadata:
       labels:
-        k8s-app: github-authn-node
+        k8s-app: node-kubernetes-github-authn
       annotations:
         scheduler.alpha.kubernetes.io/critical-pod: ''
     spec:
       containers:
-      - image: shoganator/kubernetes-github-authn-node
-        name: kubernetes-github-authn-node
+      - image: shoganator/node-kubernetes-github-authn
+        name: node-kubernetes-github-authn
         ports:
         - containerPort: 3000
           hostPort: 3000

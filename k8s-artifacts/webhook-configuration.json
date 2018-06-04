@@ -4,7 +4,7 @@
     "preferences": {},
     "clusters": [
         {
-            "name": "github-authn-node",
+            "name": "node-kubernetes-github-authn",
             "cluster": {
                 "server": "http://localhost:3000/authenticate"
             }
@@ -22,7 +22,7 @@
         {
             "name": "webhook",
             "context": {
-                "cluster": "github-authn-node",
+                "cluster": "node-kubernetes-github-authn",
                 "user": "authn-apiserver"
             }
         }

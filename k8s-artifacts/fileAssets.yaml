@@ -1,0 +1,20 @@
+fileAssets:
+- content: |
+    clusters:
+    - name: node-kubernetes-github-authn
+      cluster:
+        server: http://localhost:3000/authenticate
+    users:
+    - name: authn-apiserver
+      user:
+        token: secret
+    contexts:
+    - name: webhook
+      context:
+        cluster: node-kubernetes-github-authn
+        user: authn-apiserver
+    current-context: webhook
+  name: authentication.yaml
+  path: /srv/kubernetes/webhook-authentication.yaml
+  roles:
+  - Master
